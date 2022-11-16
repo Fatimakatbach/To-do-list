@@ -1,13 +1,13 @@
-
+.list{
+  margin-left: 105px;
+  margin-right: 105px;
+}
 .Add{
     display: flex;
     justify-content: center;
-
-
-
     .writeDown{
-        min-height: 50px;
-        width: 1200px;
+        min-height: 30px;
+        width: 1227px;
     }
 }
 *{
@@ -23,28 +23,38 @@ p{
 
 }
 li{
-  display: flex;
     background: #fff;
     position: relative;
     z-index: 10;
-    padding: 15px 40px;
+    padding: 15px 0px;
     margin: -1px 0 0;
     border-bottom: 1px solid #1f2b4a;
     font-size: 15px;
-    zoom: 1;
 }
 
-
-.list-fav{
-    display: flex;
-    flex-direction: column;
-
-}
-.Hacer{
+.Done{
   text-decoration: line-through;
   display: flex;
+
+}
+.favorite, .Undone , .Done{
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+
+}
+.favbuttons{
+  display: flex;
+
 }
 
+.undonebutton{
+  display: flex;
+
+}
+.emoji{
+  font-size: 17px;
+}
 
 
 

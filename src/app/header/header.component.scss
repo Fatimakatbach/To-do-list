@@ -1,16 +1,22 @@
 
 header{
+    margin-left: 105px;
+    margin-right: 105px;
+    min-height: 25vh;
+    background-image: url(../../assets/dark.webp);
 
-    min-height: 20vh;
-    background-color: blueviolet;
+    image-orientation: flip;
     display: flex;
     justify-content: space-around;
     align-items: center;
     h1{
       font-family: "Dancing Script";
-      font-size: 35px;
+      font-size: 45px;
         color: white;
 
     }
+}
+image{
+  min-width: 50px;
 }
 

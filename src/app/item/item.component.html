@@ -3,40 +3,37 @@
 <button (click) = "clickAdd()">Add new task</button>
 </div>
 
-
 <div class="list">
 <div class="favorites"><p>FAVORITES</p>
         <li [ngClass]="{'Fav' : !tarea.isDone }" *ngFor="let tarea of lista0; let index = index">
             <div class="favorite">
                 <h1>{{tarea.title}}</h1>
-                <div class="favbutton">
-
-                  <input class="Botón" [(ngModel)]="tarea.isDone" (click)="Cambiar0(index)"  type="checkbox">
-                  <a class="fav1"><h1 class="textofav" (click)="CambiarFavRemove(index)">🌕</h1></a>
+                <div class="favbuttons">
+                  <a><h1 class="emoji" (click)="CambiarFavRemove(index)">❤️</h1></a>
+                  <input class="check" [(ngModel)]="tarea.isDone" (click)="Cambiar0(index)"  type="checkbox">
                 </div>
             </div>
         </li>
 </div>
+
 <div class="undone"><p>UNDONE</p>
         <li [ngClass]="{'NoHecho' : !tarea.isDone }" *ngFor="let tarea of lista1; let index = index">
-            <div class="SinHacer">
-                <h1>{{tarea.title}}</h1>
-                <div class="favbutton">
-                    <a class="fav1"><h1 class="textofav" (click)="CambiarFavAdd(index)">🌑</h1></a>
-
-                </div>
-                <div class="CajaBotón">
-                    <input class="Botón" [(ngModel)] ="tarea.isDone" (click)="Cambiar1(index)"  type="checkbox">
+            <div class="Undone">
+                <div><h1>{{tarea.title}}</h1></div>
+                <div class="undonebutton">
+                  <a><h1 class="emoji" (click)="CambiarFavAdd(index)">🤍</h1></a>
+                    <input class="check" [(ngModel)]="tarea.isDone" (click)="Cambiar1(index)"  type="checkbox">
                 </div>
             </div>
         </li>
 </div>
+
 <div class="done"><P>DONE</P>
         <li [ngClass]="{'Hecho' : tarea.isDone }" *ngFor="let tarea of lista2; let index = index">
-            <div class="Hacer">
-                <h1>{{tarea.title}}</h1>
-                <div class="CajaBotón">
-                    <input class="Botón" [(ngModel)]="tarea.isDone" (click)="Cambiar2(index)" type="checkbox">
+            <div class="Done">
+                <div><h1>{{tarea.title}}</h1></div>
+                <div class="donebutton">
+                    <input class="ckeck" [(ngModel)]="tarea.isDone" (click)="Cambiar2(index)" type="checkbox">
                 </div>
             </div>
         </li>
